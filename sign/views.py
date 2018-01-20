@@ -17,6 +17,7 @@ def login_action(request):
             # return render(request,'login.html')
             response = HttpResponseRedirect('/login/')
             response.set_cookie('user',username,3600)
+            print '123'
             return response
         else:
             return render(request,'index.html',{'error':'username or password error~'})
